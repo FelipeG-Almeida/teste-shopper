@@ -1,0 +1,45 @@
+header {
+    align-items: center;
+    background-color: #1e2044;
+    color: #FFF;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 50px;
+}
+
+.logo {
+    width: 250px;
+}
+
+main {
+    padding: 0 5%;
+}
+
+.option {
+    color: #1e2044;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.buttons__container {
+    column-gap: 15px;
+    display: flex;
+}
+
+button {
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid #0dab77;
+    color: #0dab77;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family:'Segoe UI', sans-serif;
+    font-weight: 700;
+    transition: 0.25s all;
+    padding: 8px 15px;
+}
+
+button:hover {
+    color: #fff;
+    background-color: #0dab77;
+}
