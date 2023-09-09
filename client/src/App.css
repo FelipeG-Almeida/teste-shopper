@@ -1,45 +1,88 @@
 header {
-    align-items: center;
-    background-color: #1e2044;
-    color: #FFF;
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 50px;
+	align-items: center;
+	background-color: #1e2044;
+	color: #fff;
+	display: flex;
+	justify-content: space-between;
+	padding: 15px 50px;
 }
 
 .logo {
-    width: 250px;
+	width: 250px;
 }
 
 main {
-    padding: 0 5%;
+	padding: 0 5%;
 }
 
 .option {
-    color: #1e2044;
-    font-size: 1.5rem;
-    font-weight: 700;
+	color: #1e2044;
+	font-size: 1.5rem;
+	font-weight: 700;
 }
 
 .buttons__container {
-    column-gap: 15px;
-    display: flex;
+	column-gap: 15px;
+	display: flex;
 }
 
 button {
-    background-color: #fff;
-    border-radius: 10px;
-    border: 1px solid #0dab77;
-    color: #0dab77;
-    cursor: pointer;
-    font-size: 1rem;
-    font-family:'Segoe UI', sans-serif;
-    font-weight: 700;
-    transition: 0.25s all;
-    padding: 8px 15px;
+	background-color: #fff;
+	border-radius: 10px;
+	border: 1px solid #0dab77;
+	color: #0dab77;
+	cursor: pointer;
+	font-size: 1rem;
+	font-family: 'Segoe UI', sans-serif;
+	font-weight: 700;
+	transition: 0.25s all;
+	padding: 8px 15px;
 }
 
 button:hover {
-    color: #fff;
-    background-color: #0dab77;
+	color: #fff;
+	background-color: #0dab77;
+}
+
+button[disabled] {
+	cursor: not-allowed;
+}
+
+table {
+	border-collapse: collapse;
+	border-radius: 10px;
+	border-spacing: 0;
+	margin-top: 20px;
+	overflow: hidden;
+	width: 100%;
+}
+
+th {
+	background-color: #0dab77;
+	color: #fff;
+	padding: 10px;
+}
+
+.dataRow {
+	text-align: center;
+	font-weight: 300;
+	height: 50px;
+}
+
+.dataRow:nth-child(odd) {
+	background-color: #f5f5f5;
+}
+
+.dataRow:hover {
+	background-color: #bbe7d8;
+}
+
+.Ok {
+	color: #2c662d;
+	font-weight: 700;
+}
+
+.notOk {
+	color: #9f3a38;
+	font-weight: 700;
 }

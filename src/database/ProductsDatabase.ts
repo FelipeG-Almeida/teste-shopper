@@ -1,3 +1,4 @@
+import { response } from 'express';
 import { productDB, productPackageDB } from '../models/Products';
 import { BaseDataBase } from './BaseDatabase';
 
@@ -12,10 +13,23 @@ export class ProductsDatabase extends BaseDataBase {
 		return productDB;
 	}
 
-	public async getPackageByCode(code: string): Promise<productPackageDB> {
-		const [packageDB]: productPackageDB[] = await BaseDataBase.connection(
+	public async getPackageByCode(code: string): Promise<productPackageDB[]> {
+		const packageDB: productPackageDB[] = await BaseDataBase.connection(
 			ProductsDatabase.TABLE_PACKS
 		).where('pack_id', '=', code);
 		return packageDB;
+	}
+
+	public async updatePrice(code: string, price: number): Promise<void> {
+		await BaseDataBase.connection(ProductsDatabase.TABLE_PRODUCTS)
+			.where('code', '=', code)
+			.update({ sales_price: price });
+	}
+
+	public async getProducts(): Promise<productDB[]> {
+		const response = await BaseDataBase.connection(
+			ProductsDatabase.TABLE_PRODUCTS
+		).select('*');
+		return response;
 	}
 }

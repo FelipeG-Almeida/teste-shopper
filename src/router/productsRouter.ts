@@ -10,3 +10,5 @@ const productsController = new ProductsController(
 );
 
 productsRouter.post('/upload', productsController.checkCSV);
+productsRouter.put('/update', productsController.update);
+productsRouter.get('/products', productsController.getProducts)
