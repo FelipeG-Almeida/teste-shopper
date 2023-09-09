@@ -56,7 +56,7 @@ Este projeto é um teste técnico que consiste em uma aplicação web para valid
    cd client
    npm run start
 
-Acesse a aplicação no seu navegador em http://localhost:3003
+Acesse a aplicação no seu navegador em http://localhost:3000
 
 ## Como Usar
 
